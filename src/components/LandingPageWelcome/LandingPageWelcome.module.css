@@ -1,0 +1,23 @@
+.LandingPageWelcome {
+    @apply relative h-screen w-full bg-transparent;
+}
+
+.HeroTextBox {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 text-center flex flex-col items-start justify-center overflow-hidden w-fit min-h-min;
+}
+
+.Salutation {
+    @apply text-3xl font-extralight;
+}
+
+.Introduction {
+    @apply flex flex-col items-start justify-center text-7xl text-nowrap font-extralight;
+}
+
+.Introduction div{
+    @apply block overflow-hidden;
+}
+
+.Introduction span {
+    @apply translate-y-full block;
+}

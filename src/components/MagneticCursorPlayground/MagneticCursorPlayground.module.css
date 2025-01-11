@@ -1,0 +1,57 @@
+/* .MagneticCursorPlayground {
+    @apply flex justify-center items-center h-screen w-screen bg-white;
+}
+
+.MagneticCursorPlayground button{
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.custom_cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.magnetic_target {
+    display: inline-block;
+    margin: 100px;
+    padding: 20px 40px;
+    background: lightblue;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+} */
+
+.customCursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(176, 176, 176, 0.8);
+    border-radius: 50%;
+    pointer-events: none; /* Prevent blocking interactions */
+    z-index: 9999;
+    transition: transform 0.2s ease-out;
+}
+
+.magneticTarget {
+    display: inline-block;
+    margin: 100px;
+    padding: 20px 40px;
+    background: lightblue;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
