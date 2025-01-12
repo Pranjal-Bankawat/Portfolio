@@ -12,6 +12,7 @@
 
 body {
   width: 100vw;
+  margin: auto;
   background-color: black;
   color: white;
   cursor: none;

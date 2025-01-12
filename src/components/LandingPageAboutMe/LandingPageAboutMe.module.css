@@ -1,5 +1,5 @@
 .LandingPageAboutMe{
-    @apply flex items-center justify-around my-40;
+    @apply flex items-center justify-around my-36 w-11/12 mx-auto;
 }
 
 .AboutMe{

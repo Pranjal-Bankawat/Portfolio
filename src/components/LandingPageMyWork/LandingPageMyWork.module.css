@@ -1,0 +1,27 @@
+.SelectedWork{
+    @apply w-10/12 m-auto;
+}
+
+.SectionTitle{
+    @apply text-7xl text-nowrap font-extralight text-center;
+}
+
+.ProjectnStack{
+    @apply w-full flex items-start justify-around mt-20;
+}
+
+.ProjectName{
+    @apply text-5xl font-light;
+}
+
+.ProjectType{
+    @apply text-4xl font-light my-5 text-slate-600;
+}
+
+.Project{
+    @apply w-8/12;
+}
+
+.ProjectImage{
+    @apply w-full relative h-[500px] border rounded-2xl border-transparent overflow-hidden;
+}
