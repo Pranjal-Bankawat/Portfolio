@@ -2,11 +2,24 @@ import ProjectMetadata from "./ProjectMetadata";
 import Image from "next/image"; 
 import styles from './LandingPageMyWork.module.css';
 
-const Project = () => {
+interface ProjectDataProps {
+    name: string;
+    type: string;
+    event: string;
+    year: string;
+    description: string;
+    techUsed: string[];
+}
+
+interface ProjectProps {
+    projectData: ProjectDataProps;
+}
+
+const Project: React.FC<ProjectProps> = ({ projectData }) => {
     return (
         <div className={styles.Project}>
             <div className={styles.ProjectTitle}>
-                <div className={styles.ProjectName}>DASH</div>
+                <div className={styles.ProjectName}>{projectData.name}</div>
                 <div className={styles.ProjectType}>Desktop App</div>
             </div>
             <div className={styles.ProjectImage}>

@@ -7,21 +7,46 @@
 }
 
 .ProjectnStack{
-    @apply w-full flex items-start justify-around mt-20;
+    @apply w-full flex items-start justify-between mt-20 relative;
+}
+
+.Projects{
+    @apply w-8/12;
+}
+
+.Project{
+    @apply mt-10 mb-40;
 }
 
 .ProjectName{
     @apply text-5xl font-light;
 }
 
-.ProjectType{
+.ProjectType,
+.TechStackTitle{
     @apply text-4xl font-light my-5 text-slate-600;
 }
 
+.TechStackTitle{
+    @apply text-white mt-0;
+}
+
 .Project{
-    @apply w-8/12;
+    @apply w-full;
 }
 
 .ProjectImage{
     @apply w-full relative h-[500px] border rounded-2xl border-transparent overflow-hidden;
+}
+
+.ProjectInfo{
+    @apply flex;
+}
+
+.TechStacks{
+    @apply sticky top-0 w-[25%] ml-28;
+}
+
+.TechStack{
+    @apply flex items-center justify-center bg-white text-black text-sm py-2 px-5 rounded-xl;
 }
