@@ -15,7 +15,7 @@
 }
 
 .Project{
-    @apply mt-10 mb-36 w-full;
+    @apply mt-10 mb-36 w-full opacity-0;
 }
 
 .ProjectName{
@@ -70,7 +70,7 @@
 }
 
 .TechStacks{
-    @apply sticky top-0 w-[25%] ml-28 pt-10;
+    @apply sticky top-0 w-[25%] ml-28 pt-10 opacity-0;
 }
 
 .TechStack{

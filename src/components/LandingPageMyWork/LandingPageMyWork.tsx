@@ -1,11 +1,44 @@
+"use client"
+
+import { useEffect } from 'react';
 import styles from './LandingPageMyWork.module.css';
 import Project from './Project';
 import TechStack from './TechStack';
+import anime from 'animejs';
 
 const LandingPageMyWork = () => {
 
-    const animateOnScroll = () => {
-        
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                anime({
+                  targets: entry.target,
+                  opacity: [0, 1],
+                  scale: [0.5, 1],
+                  duration: 2000,
+                  easing: 'easeOutExpo',
+                });
+          
+                observer.unobserve(entry.target);
+              }
+            });
+        }, {
+            threshold: 0.4,
+        });
+
+        const projectElements = document.querySelectorAll(`.${styles.TechStacks}`);
+        if (projectElements) {
+            projectElements.forEach((element) => observer.observe(element));
+        }
+    },[]);
+
+    const activeSkills = () => {
+
+    }
+
+    const activeProjectsSkills = () => {
+
     }
 
     const techStackArr = [
@@ -43,11 +76,11 @@ const LandingPageMyWork = () => {
             "techUsed" : ["nextjs", "tailwindcss", "python", "peertopeer", "tauri", "serverless"],
         },
         { 
-            "name": "BASH",
-            "type": "Desktop App", 
+            "name": "FLASH DRIVE",
+            "type": "Website", 
             "event": "Side Project", 
-            "year": "2024", 
-            "description": "DASH - Distributed Adaptive Serverless Hosting offers a peer to peer, cost-effective, and efficient alternative for hosting serverless functions. It delivers a streamlined solution, designed with developers in mind providing simplicity and effectiveness without compromising performance." ,
+            "year": "2023", 
+            "description": "A Next.js web platform featuring an AI image generator with custom-trained Stable Diffusion model and a few other arcade games. Built with Firebase and EpicRealism image model, it's just a DBMS course project that evolved into a playground for implementing advanced web technologies." ,
             "techUsed" : ["nextjs", "tailwindcss", "python", "peertopeer", "tauri", "serverless"],
         }
     ];
@@ -60,7 +93,7 @@ const LandingPageMyWork = () => {
 
     const projects = () => {
         return projectDataArr.map(element => {
-            return <Project key={element.name} projectData={element}/>
+            return <Project key={element.name} projectData={element} activeProjectsSkills = {activeProjectsSkills}/>
         });
     }
 
