@@ -15,7 +15,7 @@
 }
 
 .Project{
-    @apply mt-10 mb-40;
+    @apply mt-10 mb-36 w-full;
 }
 
 .ProjectName{
@@ -24,15 +24,11 @@
 
 .ProjectType,
 .TechStackTitle{
-    @apply text-4xl font-light my-5 text-slate-600;
+    @apply text-4xl font-light my-5 text-neutral-400;
 }
 
 .TechStackTitle{
     @apply text-white mt-0;
-}
-
-.Project{
-    @apply w-full;
 }
 
 .ProjectImage{
@@ -40,13 +36,43 @@
 }
 
 .ProjectInfo{
-    @apply flex;
+    @apply grid grid-cols-1 gap-8 md:grid-cols-12 mt-20 w-full;
+}
+
+.ProjectMetadata{
+    @apply row-span-3 md:col-span-3 md:space-y-3;
+}
+
+.ProjectDescription{
+    @apply md:col-span-7;
+}
+
+.ProjectDescriptionTitle,
+.ProjectMetadataTitle{
+    @apply mb-2 text-sm uppercase tracking-wider text-neutral-500;
+}
+
+.ProjectDescriptionText,
+.ProjectMetadataText{
+    @apply text-xl font-light leading-relaxed text-justify;
+}
+
+.ProjectMetadataText{
+    @apply text-lg
+}
+
+.ProjectCTA{
+    @apply flex items-start justify-end col-span-2;
+}
+
+.ProjectCTACover{
+    @apply block relative h-16 w-16;
 }
 
 .TechStacks{
-    @apply sticky top-0 w-[25%] ml-28;
+    @apply sticky top-0 w-[25%] ml-28 pt-10;
 }
 
 .TechStack{
-    @apply flex items-center justify-center bg-white text-black text-sm py-2 px-5 rounded-xl;
+    @apply flex items-center justify-center bg-[#2a2a2a] text-gray-200 text-sm py-2 px-5 rounded-xl;
 }

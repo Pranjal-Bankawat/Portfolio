@@ -4,12 +4,16 @@ const ProjectMetadata = () => {
     return (
         <>
             <div className={styles.ProjectMetadataType}>
-                <div>Type</div>
-                <div>Desktop App</div>
+                <p className={styles.ProjectMetadataTitle}>Type</p>
+                <p className={styles.ProjectMetadataText}>Desktop App</p>
             </div>
             <div className={styles.ProjectMetadataYear}>
-                <div>Year</div>
-                <div>2024</div>
+                <p className={styles.ProjectMetadataTitle}>Year</p>
+                <p className={styles.ProjectMetadataText}>2024</p>
+            </div>
+            <div className={styles.ProjectMetadataEvent}>
+                <p className={styles.ProjectMetadataTitle}>Event</p>
+                <p className={styles.ProjectMetadataText}>Side Project</p>
             </div>
         </>
     )

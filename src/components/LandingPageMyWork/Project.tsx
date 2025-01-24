@@ -20,20 +20,24 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
         <div className={styles.Project}>
             <div className={styles.ProjectTitle}>
                 <div className={styles.ProjectName}>{projectData.name}</div>
-                <div className={styles.ProjectType}>Desktop App</div>
+                <div className={styles.ProjectType}>{projectData.type}</div>
             </div>
             <div className={styles.ProjectImage}>
-                <Image src="/image/project.png" alt="DASH" layout="fill" objectPosition="center" />
+                <Image src="/image/project.png" alt="DASH" fill objectPosition="center" />
             </div>
             <div className={styles.ProjectInfo}>
                 <div className={styles.ProjectMetadata}>
                     <ProjectMetadata />
                 </div>
                 <div className={styles.ProjectDescription}>
-                    <p>Description</p>
-                    <p>DASH - Distributed Adaptive Serverless Hosting offers a peer to peer, cost-effective, and efficient alternative for hosting serverless functions. It delivers a streamlined solution, designed with developers in mind providing simplicity and effectiveness without compromising performance.</p>
+                    <p className={styles.ProjectDescriptionTitle}>Description</p>
+                    <p className={styles.ProjectDescriptionText}>{projectData.description}</p>
                 </div>
-                <div className={styles.ProjectCTA}></div>
+                <div className={styles.ProjectCTA}>
+                    <div className={styles.ProjectCTACover}>
+                        <Image src="/svg/MyWorkCTA.svg" alt="arrow"  fill objectPosition="center"  />
+                    </div>
+                </div>
             </div>
         </div>
     )

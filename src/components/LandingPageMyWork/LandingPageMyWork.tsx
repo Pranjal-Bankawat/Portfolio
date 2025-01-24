@@ -33,9 +33,17 @@ const LandingPageMyWork = () => {
         { "id": "mysql", "techName": "MySQL", "techLogo": "mysql.svg" }
     ];
 
-    const projectData = [
+    const projectDataArr = [
         { 
             "name": "DASH",
+            "type": "Desktop App", 
+            "event": "Side Project", 
+            "year": "2024", 
+            "description": "DASH - Distributed Adaptive Serverless Hosting offers a peer to peer, cost-effective, and efficient alternative for hosting serverless functions. It delivers a streamlined solution, designed with developers in mind providing simplicity and effectiveness without compromising performance." ,
+            "techUsed" : ["nextjs", "tailwindcss", "python", "peertopeer", "tauri", "serverless"],
+        },
+        { 
+            "name": "BASH",
             "type": "Desktop App", 
             "event": "Side Project", 
             "year": "2024", 
@@ -50,13 +58,18 @@ const LandingPageMyWork = () => {
         });
     };
 
+    const projects = () => {
+        return projectDataArr.map(element => {
+            return <Project key={element.name} projectData={element}/>
+        });
+    }
+
     return (
         <div className={styles.SelectedWork}>
             <p className={styles.SectionTitle}>Some of my work...</p>
             <div className={styles.ProjectnStack}>
                 <div className={styles.Projects}>
-                    <Project projectData={projectData[0]}/>
-                    <Project projectData={projectData[0]}/>
+                    {projects()}
                 </div>
                 <div className={styles.TechStacks}>
                     <p className={styles.TechStackTitle}>Tech Stacks</p>
